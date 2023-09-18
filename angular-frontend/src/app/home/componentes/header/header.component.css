@@ -29,8 +29,8 @@ header {
 }
 
 .categorias {
+  display: none;
   list-style: none;
-  display: flex;
   align-items: center;
   justify-content: center;
   gap: 1em;
@@ -45,9 +45,9 @@ header {
 }
 
 .telefones {
+  display: none;
   list-style: none;
   font-size: 16px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -74,6 +74,7 @@ header {
   }
 
   .categorias {
+    display: flex;
     font-size: 18px;
     gap: 1em;
   }
