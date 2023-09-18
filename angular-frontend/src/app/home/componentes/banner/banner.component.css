@@ -1,0 +1,59 @@
+.banner {
+  position: relative;
+  height: 100vh;
+  background-image: url("../../../../assets/imgs/banner10.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.texto1 {
+  position: absolute;
+  left: 32px;
+  top: 96px;
+  max-width: 80%;
+  color: white;
+  font-size: 58px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.orcamento {
+  border: 4px solid white;
+  padding: 0.6em 0.75em;
+  font-size: 26px;
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  right: 32px;
+  color: white;
+  cursor: pointer;
+  animation: pulsacao infinite 4s linear;
+}
+
+@keyframes pulsacao {
+  38% {
+    transform: scale(1.0);
+  }
+  40% {
+    transform: scale(1.025);
+  }
+  43% {
+    transform: scale(1.0);
+  }
+  46% {
+    transform: scale(1.025);
+  }
+  49% {
+    transform: scale(1.0);
+  }
+  51% {
+    transform: scale(1.025);
+  }
+  53% {
+    transform: scale(1.0);
+  }
+}
