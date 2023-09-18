@@ -1,1 +1,26 @@
-<p>header works!</p>
+<header>
+  <fa-icon id="barras" [icon]="icones.bars"></fa-icon>
+  <img
+    id="logo"
+    src="../../../../assets/imgs/logo-vidromec.png"
+    alt="Logo da vidraçaria Vidromec"
+  />
+  <ul class="categorias">
+    <li class="categoria-selecionada">Produtos</li>
+    <li>Portifólio</li>
+    <li>Faça um orçamento</li>
+    <li>Contato</li>
+    <li>Funcionamento</li>
+  </ul>
+  <ul class="social-medias">
+    <li>
+      <ul class="telefones">
+        <li>(87) 99906-5337</li>
+        <li>(87) 99936-1683</li>
+      </ul>
+    </li>
+    <li><fa-icon [icon]="icones.instagram"></fa-icon></li>
+    <li><fa-icon id="icon-facebook" [icon]="icones.facebook"></fa-icon></li>
+    <li><fa-icon [icon]="icones.whatsapp"></fa-icon></li>
+  </ul>
+</header>
