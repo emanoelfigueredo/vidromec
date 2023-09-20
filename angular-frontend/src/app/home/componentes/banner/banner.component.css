@@ -18,20 +18,31 @@
   font-weight: 700;
 }
 
+.orcamento-container {
+  position: absolute;
+  bottom: 96px;
+  right: 32px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 64px);
+}
+
 .orcamento {
-  border: 4px solid white;
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+  animation: pulsacao infinite 4s linear;
   padding: 0.6em 0.75em;
   font-size: 26px;
-  position: absolute;
-  bottom: 32px;
-  left: 32px;
   text-align: center;
   font-weight: 500;
   letter-spacing: 1.5px;
-  right: 32px;
   color: white;
-  cursor: pointer;
-  animation: pulsacao infinite 4s linear;
+  border: 4px solid white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes pulsacao {
@@ -57,3 +68,81 @@
     transform: scale(1.0);
   }
 }
+
+@media screen and (min-width: 500px) {
+  .texto1 {
+    font-size: 68px;
+  }
+}
+
+
+@media screen and (min-width: 650px) {
+  .texto1 {
+    font-size: 80px;
+    left: 64px;
+  }
+
+  .banner {
+    background-image: url("../../../../assets/imgs/banner11.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .texto1 {
+    top: 134px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .texto1 {
+    font-size: 90px;
+  }
+}
+
+
+@media screen and (min-width: 1060px) {
+  .texto1 {
+    max-width: 70%;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  .texto1 {
+    font-size: 95px;
+    max-width: 55%;
+  }
+
+  .orcamento-container {
+    position: absolute;
+    height: 240px;
+    top: 174px;
+    left: calc(60% + 32px);
+    right: 64px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: calc(40% - 64px);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .banner {
+    height: 600px;
+  }
+
+  .texto1 {
+    top: 220px;
+    font-size: 85px;
+    max-width: 50%;
+  }
+
+
+  .orcamento-container {
+    top: 250px;
+  }
+}
+
+
