@@ -1,0 +1,9 @@
+<section class="box-servicos">
+  <app-titulo titulo="Serviços"></app-titulo>
+  <div class="servicos">
+    <app-servico
+      *ngFor="let servico of servicos"
+      [servico]="servico"
+    ></app-servico>
+  </div>
+</section>

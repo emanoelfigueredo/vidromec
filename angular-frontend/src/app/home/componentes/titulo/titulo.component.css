@@ -1,0 +1,26 @@
+.titulo {
+  width: 100%;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.titulo .linha {
+  background-color: black;
+  height: 1px;
+  width: 100%;
+}
+
+.titulo h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+
+@media screen and (min-width: 1000px) {
+  .titulo h1 {
+    font-size: 32px;
+  }
+}
+
