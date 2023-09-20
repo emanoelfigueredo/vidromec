@@ -2,10 +2,12 @@
   margin: 0 auto;
   width: 100%;
   max-width: 1000px;
-  padding: 32px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+  background-color: #F2E7DC;
+  padding: 68px 32px;
 }
 
 .grid-item {
@@ -15,4 +17,13 @@
 
 .grid-item img {
   width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .box-servicos {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: transparent;
+    padding: 0 32px 32px 32px;
+    border: none;
+  }
 }

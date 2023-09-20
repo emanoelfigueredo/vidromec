@@ -9,7 +9,9 @@ import { Gallery, GalleryItem, ImageItem } from 'ng-gallery';
 export class SectionPortifolioComponent implements OnInit {
   public items!: GalleryItem[];
 
-  constructor(public gallery: Gallery) {}
+  constructor(public gallery: Gallery) {
+    this.configGallery();
+  }
 
   public ngOnInit(): void {
     this.items = [
@@ -50,10 +52,9 @@ export class SectionPortifolioComponent implements OnInit {
         thumb: '../../../../assets/imgs/servicos/porta.jpg',
       }),
     ];
-    this.configGallery();
   }
 
-  public configGallery(): void {
+  private configGallery(): void {
     this.gallery.config.thumbHeight = 100;
     this.gallery.config.autoHeight = false;
     this.gallery.config.autoPlay = true;
