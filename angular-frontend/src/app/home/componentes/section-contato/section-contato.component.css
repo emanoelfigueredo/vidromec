@@ -16,6 +16,16 @@
   gap: 32px;
 }
 
+.content h1 {
+  max-width: 486px;
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  margin-top: 32px;
+  padding: 0 32px;
+  letter-spacing: 2px;
+}
+
 .cards {
   max-width: 550px;
   width: 100%;
@@ -26,6 +36,8 @@
 }
 
 .card {
+  color: black;
+  text-decoration: none;
   cursor: pointer;
   display: flex;
   flex-direction: column;
