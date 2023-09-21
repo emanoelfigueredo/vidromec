@@ -1,0 +1,132 @@
+.contato {
+  width: 100%;
+  padding: 3em 0;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  background-image: url("../../../../assets/imgs/banner/contato-banner3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+
+.cards {
+  max-width: 550px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, calc((100% / 6) - (80px / 6)));
+  gap: 1em;
+  padding: 32px;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  background-color: #FEFEFE;
+  padding: 0.75em;
+  border-radius: 6px;
+  border-top: var(--yellow) 10px solid;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+  word-wrap: break-word;
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card fa-icon {
+  margin: 8px 0;
+}
+
+.telefone1 {
+  grid-column: 1 / span 3;
+}
+
+.telefone1 fa-icon, .telefone2 fa-icon {
+  color: #25D366;
+}
+
+.telefone2 {
+  grid-column: 4 / span 3;
+}
+
+.email {
+  grid-column: 1 / span 6;
+}
+
+.insta {
+  grid-column: 1 / span 3;
+}
+
+.facebook {
+  grid-column: 4 / span 3;
+}
+
+.email fa-icon {
+  color: #888;
+}
+
+.insta fa-icon {
+  color: #3f729b;
+}
+
+.facebook fa-icon {
+  color: #3b5998;
+}
+
+.card h3 {
+  font-size: 16px;
+}
+
+.card p {
+  width: 100%;
+}
+
+@media screen and (min-width: 400px) {
+
+  .card fa-icon {
+    font-size: 20px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+  }
+
+  .card p {
+    font-size: 18px;
+  }
+
+}
+
+
+@media screen and (min-width: 500px) {
+
+  .card fa-icon {
+    font-size: 22px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+  }
+
+  .card p {
+    font-size: 20px;
+  }
+
+  .email {
+    grid-column: 2 / span 4;
+  }
+
+}
