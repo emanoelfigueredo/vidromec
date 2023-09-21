@@ -1,13 +1,21 @@
 .box-servicos {
   margin: 0 auto;
   width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
   background-color: #F2E7DC;
-  padding: 68px 32px;
+  padding: 68px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  width: 100%;
+  gap: 32px;
+  padding: 0 32px;
 }
 
 .grid-item {
@@ -25,5 +33,9 @@
     background-color: transparent;
     padding: 0 32px 32px 32px;
     border: none;
+  }
+
+  .content {
+    max-width: 1000px;
   }
 }
