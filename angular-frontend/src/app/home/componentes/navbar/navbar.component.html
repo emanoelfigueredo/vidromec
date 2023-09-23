@@ -1,0 +1,49 @@
+<aside [class]="obterClasseNavbar()">
+  <ul>
+    <li
+    [class]="
+      sessaoAtual == 'SERVICO'
+        ? 'categoria-selecionada'
+        : 'categoria-nao-selecionada'
+    "
+      (click)="emitirEventoAlterarSessao('SERVICO')"
+    >
+      <fa-icon [icon]="icons.servico"></fa-icon>
+      Serviços
+    </li>
+    <li
+    [class]="
+      sessaoAtual == 'PORTIFOLIO'
+        ? 'categoria-selecionada'
+        : 'categoria-nao-selecionada'
+    "
+      (click)="emitirEventoAlterarSessao('PORTIFOLIO')"
+    >
+      <fa-icon [icon]="icons.portifolio"></fa-icon>
+      Portifólio
+    </li>
+    <li
+    [class]="
+      sessaoAtual == 'FUNCIONAMENTO'
+        ? 'categoria-selecionada'
+        : 'categoria-nao-selecionada'
+    "
+      (click)="emitirEventoAlterarSessao('FUNCIONAMENTO')"
+    >
+      <fa-icon [icon]="icons.funcionamento"></fa-icon>
+      Funcionamento
+    </li>
+    <li
+      [class]="
+        sessaoAtual == 'CONTATO'
+          ? 'categoria-selecionada'
+          : 'categoria-nao-selecionada'
+      "
+      (click)="emitirEventoAlterarSessao('CONTATO')"
+    >
+      <fa-icon [icon]="icons.contato"></fa-icon>
+      Contato
+    </li>
+  </ul>
+</aside>
+<div [class]="obterClasseBackdrop()"></div>

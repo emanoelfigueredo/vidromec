@@ -15,6 +15,7 @@ import { TituloComponent } from './componentes/titulo/titulo.component';
 import { SectionPortifolioComponent } from './componentes/section-portifolio/section-portifolio.component';
 import { SectionFuncionamentoComponent } from './componentes/section-funcionamento/section-funcionamento.component';
 import { SectionContatoComponent } from './componentes/section-contato/section-contato.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { SectionContatoComponent } from './componentes/section-contato/section-c
     TituloComponent,
     SectionPortifolioComponent,
     SectionFuncionamentoComponent,
-    SectionContatoComponent
+    SectionContatoComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,

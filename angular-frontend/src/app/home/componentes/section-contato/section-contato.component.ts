@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./section-contato.component.css']
 })
 export class SectionContatoComponent {
-  public icones: any = {
+public icones: any = {
     whatsapp: faWhatsapp,
     email: faEnvelope,
     instagram: faInstagram,

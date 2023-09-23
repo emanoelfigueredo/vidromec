@@ -1,16 +1,60 @@
 <header>
-  <fa-icon id="barras" [icon]="icones.bars"></fa-icon>
+  <fa-icon
+    id="barras"
+    [icon]="icones.bars"
+    (click)="trocarEstadoNavBar()"
+  ></fa-icon>
   <img
     id="logo"
     src="../../../../assets/imgs/logo-vidromec.png"
     alt="Logo da vidraçaria Vidromec"
   />
   <ul class="categorias">
-    <li class="categoria-selecionada">Produtos</li>
-    <li>Portifólio</li>
-    <li>Faça um orçamento</li>
-    <li>Contato</li>
-    <li>Funcionamento</li>
+    <li
+      [class]="
+        sessaoAtual == 'SERVICO'
+          ? 'categoria-selecionada'
+          : 'categoria-nao-selecionada'
+      "
+      (click)="emitirEventoAlterarSessao('SERVICO')"
+    >
+      Serviços
+    </li>
+    <li
+      [class]="
+        sessaoAtual == 'PORTIFOLIO'
+          ? 'categoria-selecionada'
+          : 'categoria-nao-selecionada'
+      "
+      (click)="emitirEventoAlterarSessao('PORTIFOLIO')"
+    >
+      Portifólio
+    </li>
+    <li
+      [class]="
+        sessaoAtual == 'FUNCIONAMENTO'
+          ? 'categoria-selecionada'
+          : 'categoria-nao-selecionada'
+      "
+      (click)="emitirEventoAlterarSessao('FUNCIONAMENTO')"
+    >
+      Funcionamento
+    </li>
+    <li class="categoria-nao-selecionada"
+      (click)="emitirEventoAlterarSessao('CONTATO')"
+    >
+      Faça um orçamento
+    </li>
+    <li
+      [class]="
+        sessaoAtual == 'CONTATO'
+          ? 'categoria-selecionada'
+          : 'categoria-nao-selecionada'
+      "
+      (click)="emitirEventoAlterarSessao('CONTATO')"
+    >
+      Contato
+    </li>
   </ul>
   <ul class="social-medias">
     <li>
