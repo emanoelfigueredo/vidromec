@@ -1,7 +1,12 @@
 <section class="funcionamento">
   <app-titulo titulo="Funcionamento"></app-titulo>
   <div class="box-content">
-    <div class="localizacao">
+    <div
+      class="localizacao"
+      data-aos="fade-right"
+      data-aos-duration="500"
+      data-aos-delay="250"
+    >
       <div class="localizado">
         <fa-icon [icon]="icons.localizacao"></fa-icon>
         <p>Localizado em Custódia - PE</p>
@@ -13,12 +18,17 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
-    <div class="atendimento">
+    <div
+      class="atendimento"
+      data-aos="fade-left"
+      data-aos-duration="500"
+      data-aos-delay="750"
+    >
       <img
         src="../../../../assets/imgs/gifs/time.gif"
         alt="Gif de homem esperando"
       />
-      <ul class="info">
+      <ul class="info" data-aos="fade-up">
         <h1>Horário de atendimento</h1>
         <li>
           <fa-icon [icon]="icons.calendario"></fa-icon>
