@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import {
   NavbarSubjectService,
   Sessao,
@@ -12,11 +12,21 @@ import {
 export class HomeComponent implements OnInit {
   public sessaoAtual: Sessao = Sessao.BANNER;
   public urlBase = window.location.origin + window.location.pathname;
+  public larguraTela: number;
+  public alturaHeader: number;
 
   constructor(private readonly navbarSubjectService: NavbarSubjectService) {}
 
   public ngOnInit(): void {
+    this.larguraTela = window.innerWidth;
     this.escutarEventoTrocaDeSessao();
+    this.setarAlturaTela();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  public onResize(event: any) {
+    this.larguraTela = window.innerWidth;
+    this.setarAlturaTela();
   }
 
   private escutarEventoTrocaDeSessao(): void {
@@ -32,13 +42,18 @@ export class HomeComponent implements OnInit {
   }
 
   private subirScroll(): void {
-    let subtracao = 70;
-    if (
-      this.sessaoAtual == Sessao.CONTATO ||
-      this.sessaoAtual == Sessao.PORTIFOLIO
-    ) {
-      subtracao = 80;
+    window.scrollTo(0, window.scrollY - this.alturaHeader);
+  }
+
+  private setarAlturaTela(): void {
+    if(this.larguraTela < 700) {
+      this.alturaHeader = 70;
+      return;
     }
-    window.scrollTo(0, window.scrollY - subtracao);
+    if(this.larguraTela < 900) {
+      this.alturaHeader = 80;
+      return;
+    }
+    this.alturaHeader = 90;
   }
 }

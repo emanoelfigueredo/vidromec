@@ -3,7 +3,7 @@
   width: 100%;
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
   background-color: #F2E7DC;
-  padding: 68px 0;
+  padding: 32px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@
   max-width: 700px;
   width: 100%;
   gap: 32px;
-  padding: 0 32px;
+  padding: 32px;
 }
 
 .grid-item {
