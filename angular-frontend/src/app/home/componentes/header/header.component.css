@@ -43,6 +43,16 @@ header {
   cursor: pointer;
 }
 
+.categorias li {
+  padding-bottom: 3px;
+  transition: 0.2s;
+}
+
+.categorias li:hover {
+  color: var(--yellow);
+  border-bottom: 3px solid var(--yellow);
+}
+
 .telefones {
   display: none;
   list-style: none;

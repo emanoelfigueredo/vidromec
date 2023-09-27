@@ -13,7 +13,13 @@
         <li class="title">Funcionamento</li>
         <li>
           <fa-icon [icon]="icones.localizacao"></fa-icon>
-          <p>Custódia - PE e região</p>
+          <p>
+            <a
+              href="https://www.google.com.br/maps/place/Cust%C3%B3dia,+PE,+56640-000/@-8.0877168,-37.6805773,13z/data=!3m1!4b1!4m6!3m5!1s0x7a7b8aaa24429f3:0x6820633397943afe!8m2!3d-8.0861684!4d-37.6402644!16s%2Fg%2F11bxfwm934?entry=ttu"
+            >
+              Custódia - PE e região</a
+            >
+          </p>
         </li>
         <li>
           <fa-icon [icon]="icones.relogio"></fa-icon>
@@ -26,43 +32,47 @@
       </ul>
       <ul class="info-box">
         <li class="title">Redes sociais</li>
-        <li>
+        <li class="click">
           <fa-icon [icon]="icones.instagram"></fa-icon>
           <p>@vidromec</p>
         </li>
-        <li>
+        <li class="click">
           <fa-icon [icon]="icones.facebook"></fa-icon>
           <p>vidromec</p>
         </li>
       </ul>
       <ul class="info-box">
         <li class="title">Sessões</li>
-        <li>
-          <p>Produtos</p>
+        <li class="click" (click)="emitirEventoAlterarSessao('SERVICO')">
+          <p>Serviços</p>
         </li>
-        <li>
+        <li class="click" (click)="emitirEventoAlterarSessao('PORTIFOLIO')">
           <p>Portifólio</p>
         </li>
-        <li>
-          <p>Contato</p>
-        </li>
-        <li>
+        <li class="click" (click)="emitirEventoAlterarSessao('FUNCIONAMENTO')">
           <p>Funcionamento</p>
+        </li>
+        <li class="click" (click)="emitirEventoAlterarSessao('CONTATO')">
+          <p>Contato</p>
         </li>
       </ul>
       <ul class="info-box">
         <li class="title">Fale conosco</li>
-        <li>
+        <li class="click">
           <fa-icon [icon]="icones.email"></fa-icon>
-          <p>vidracaria.vidromec@gmail.com</p>
+          <p>
+            <a href="mailto:vidracaria.vidromec@gmail.com"
+              >vidracaria.vidromec@gmail.com</a
+            >
+          </p>
         </li>
-        <li>
+        <li class="click">
           <fa-icon [icon]="icones.telefone"></fa-icon>
-          <p>(87) 99906-5337</p>
+          <a href="tel:87999065337">(87) 99906-5337</a>
         </li>
-        <li>
+        <li class="click">
           <fa-icon [icon]="icones.telefone"></fa-icon>
-          <p>(87) 99936-1683</p>
+          <a href="tel:87999361683">(87) 99936-1683</a>
         </li>
       </ul>
     </div>
@@ -72,13 +82,17 @@
   </div>
   <div class="dev-info">
     <ul>
-      <li>
-        <fa-icon [icon]="icones.dev"></fa-icon>
-        <p>Desenvolvido por Emanoel Figuerêdo</p>
+      <li class="click">
+        <a href="https://efigueredo.vercel.com">
+          <fa-icon [icon]="icones.dev"></fa-icon>
+          <p>Desenvolvido por Emanoel Figuerêdo</p>
+        </a>
       </li>
-      <li>
-        <fa-icon [icon]="icones.web"></fa-icon>
-        <p>www.efigueredo.vercel.com</p>
+      <li class="click">
+        <a href="https://efigueredo.vercel.com">
+          <fa-icon [icon]="icones.web"></fa-icon>
+          <p>efigueredo.vercel.com</p>
+        </a>
       </li>
     </ul>
   </div>

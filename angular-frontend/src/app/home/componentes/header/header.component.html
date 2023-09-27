@@ -23,13 +23,13 @@
   </ul>
   <ul class="social-medias">
     <li>
-      <ul class="telefones">
+      <ul (click)="emitirEventoAlterarSessao('CONTATO')" class="telefones">
         <li>(87) 99906-5337</li>
         <li>(87) 99936-1683</li>
       </ul>
     </li>
     <li><fa-icon [icon]="icones.instagram"></fa-icon></li>
     <li><fa-icon id="icon-facebook" [icon]="icones.facebook"></fa-icon></li>
-    <li><fa-icon [icon]="icones.whatsapp"></fa-icon></li>
+    <li (click)="emitirEventoAlterarSessao('CONTATO')"><fa-icon [icon]="icones.whatsapp"></fa-icon></li>
   </ul>
 </header>
