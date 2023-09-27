@@ -28,16 +28,8 @@ aside ul {
 
 aside ul li {
   display: flex;
-  gap: 1em;
-  padding-left: 16px;
-}
-
-.categoria-selecionada {
-  border-left: 10px solid var(--yellow);
-}
-
-.categoria-nao-selecionada {
-  border-left: 10px solid var(--black);
+  gap: 24px;
+  padding: 0 24px;
 }
 
 .backdrop {

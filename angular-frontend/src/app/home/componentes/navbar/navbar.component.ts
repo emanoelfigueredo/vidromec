@@ -30,9 +30,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(private readonly navbarSubjectService: NavbarSubjectService) {}
 
-  public ngOnInit(): void {
-    this.escutarEventoAlteracaoEstadoNavBar();
-  }
+  public ngOnInit(): void {}
 
   public obterClasseNavbar(): string {
     if (this.estadoNavBar == EstadoNavBar.ABERTO) {
@@ -54,15 +52,5 @@ export class NavbarComponent implements OnInit {
     this.sessaoAtual = sessao as Sessao;
     this.estadoNavBar = EstadoNavBar.FECHADO;
     this.navbarSubjectService.alterarSessaoPagina(sessao as Sessao);
-  }
-
-  private escutarEventoAlteracaoEstadoNavBar(): void {
-    this.navbarSubjectService.alterarEstadoNavBarSubject.subscribe(() => {
-      if (this.estadoNavBar == EstadoNavBar.ABERTO) {
-        this.estadoNavBar = EstadoNavBar.FECHADO;
-        return;
-      }
-      this.estadoNavBar = EstadoNavBar.ABERTO;
-    });
   }
 }

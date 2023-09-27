@@ -43,12 +43,6 @@ header {
   cursor: pointer;
 }
 
-.categoria-selecionada {
-  border-bottom: 3px solid var(--yellow);
-  padding-bottom: 3px;
-  color: var(--yellow);
-}
-
 .telefones {
   display: none;
   list-style: none;
